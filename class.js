@@ -1,19 +1,21 @@
-class LearnableCourse {
-    //Class/Static Property
-    static totalCourses = 0;
+class Art {
+   
+    static exhibition = "Uknown";
 
-    constructor(title, tutor) {
-        this.title = title;
-        this.tutor = tutor;
-         //Increment of the total number of courses when a new course is created
-         LearnableCourse.totalCourses++;
+    constructor(type, price) {
+        this.type = type;
+        this.price = price;
+        
+    }
+     speak() {
+        console.log("the type of art is ${this.type}");
+     }
+
+  setNewExhibition(type){
+    this.exhibition = type;
+  }
     }
 
-    //Class/Static Method
-    static getTotalCourses(){
-        return LearnableCourse.totalCourses;
-    }
-}
 
 //creating instances of LearnableCourses
 const course1 = new LearnableCourse("Introduction to Javascript", "John Doe");
